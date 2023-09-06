@@ -237,3 +237,21 @@ Route::get('/A1',function () {
 
 });
 
+// has
+Route::get('/T1',function () {
+    $collection = collect([
+        10 => ['product' => 'Desk', 'price' => 200],
+        11 => ['product' => 'Desk', 'price' => 200]
+    ]);
+    $values = $collection->values();
+    dd($values->all());
+    /*
+        [
+            0 => ['product' => 'Desk', 'price' => 200],
+            1 => ['product' => 'Desk', 'price' => 200],
+        ]
+    */
+
+
+
+});
