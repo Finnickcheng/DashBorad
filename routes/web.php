@@ -3,7 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/dashboard', [DashboardController::class, 'WebIndex'])->name('Dashboard.WebIndex');
+//Route::get('/dashboard', [DashboardController::class, 'WebIndex'])->name('Dashboard.WebIndex');
 
 Route::get('/', function () {
     return view('welcome');
@@ -231,11 +231,11 @@ Route::get('/level_22', function () {
     dd($cars);
 });
 
-Route::get('/A1',function () {
-    echo strlen('helloword').'<br>';
-    echo strpos('helloword!','worms').'<br>';
-
-});
+//Route::get('/A1',function () {
+//    echo strlen('helloword').'<br>';
+//    echo strpos('helloword!','worms').'<br>';
+//
+//});
 
 // has
 Route::get('/T1',function () {
@@ -251,7 +251,20 @@ Route::get('/T1',function () {
             1 => ['product' => 'Desk', 'price' => 200],
         ]
     */
-
-
+//
 
 });
+Route::get('/csrf',function (){
+    return csrf_token();
+
+});
+
+//Route::get('/A1',[DashboardController::class, 'A1'])->name('A1');
+//Route::post('/A2',[DashboardController::class, 'A_2'])->name('A__2');
+//Route::get('/GetAll',[DashboardController::class,'GetAll'])->name('GetAll');
+//Route::get('/GetByAddress',[DashboardController::class,'GetByAddress'])->name('GetByAddress');
+//Route::post('/in_A',[DashboardController::class,'in_A'])->name('in_A');
+//Route::put('/upd_8',[DashboardController::class,'upd_8'])->name('upd_8');
+//Route::delete('/del_C',[DashboardController::class,'del_C'])->name('del_C');
+
+Route::get('Js',[DashboardController::class,'Js'])->name('Js');
