@@ -34,11 +34,13 @@
         </div>
         <div class="col-10" style="overflow-y: scroll;height: 100vh;">
             @yield('Content')
+{{--            挖洞--}}
         </div>
     </div>
 </div>
 
 @yield('Modal')
+{{--彈跳視窗--}}
 
 <script src="/lib/jQuery/jquery.min.js"></script>
 <script src="/lib/jQueryUI/jquery-ui.min.js"></script>
